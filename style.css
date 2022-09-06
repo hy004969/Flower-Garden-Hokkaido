@@ -1,0 +1,565 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+body {
+    font-family:"Yu Gothic Medium", "Caveat", "游ゴシック Medium", "YuGothic", "游ゴシック体","ヒラギノ角ゴ pro W3", sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+/*HEADER*/
+.logo {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.page-header {
+    display: flex;
+    justify-content:space-between;
+    margin-top:0;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+/*HOME*/
+.home-content {
+    text-align: center;
+    margin-top: 10%;
+    color:rgb(255, 255, 255);
+    box-shadow:0 0 30px black;
+    background:rgba(24, 53, 33, 0.483);
+    text-shadow: 10px 0px 10px #212121;
+}
+
+.home-content p {
+    font-size: 1.8rem;
+    margin: 10px 0 42px;
+    color:rgb(255, 255, 255);
+    text-shadow: 10px 0px 10px #000000;
+}
+#wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+  }
+  
+  a{
+    color: #333;
+  }
+  
+/*ハンバーガーメニュー*/
+.menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #b61b00;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+}
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px;
+}
+
+/*三本線ボタン*/
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#menu-btn-check {
+    display: none;
+}
+
+.menu-content ul {
+    padding: 70px 10px 0;
+}
+
+.menu-content ul li {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+}
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+.menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 80;
+    background-color: #d17418;
+    transition: all 0.5s;
+}
+
+#menu-btn-check:checked ~ .menu-content {
+    left: 0;
+}
+
+/*見出し*/
+.page-title {
+    font-size: 55px;
+    font-family: 'Yu Gothic Medium',serif;
+    font-weight: normal;
+    text-shadow: 10px 0px 10px #000000;
+}
+
+/*大きな背景画像*/
+.big-bg {
+    background-size: cover;
+    background-position: center top;
+}
+
+#home .page-title {
+    text-transform: none;
+}
+
+#home {
+    background-image:url(images/hanahaikei.jpg),linear-gradient(rgba(97, 41, 29, 0.723),rgba(43, 99, 29, 0.907));
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: hard-light;
+    min-height:100vh;
+    animation:  20s flower infinite;
+    animation:  25s garden infinite;
+}
+
+@keyframes flower {
+    0% { background-color: #d1cc4def; }
+    10% {background-color: #ed9450; }
+    20% { background-color: #4aff3a9b; }
+    30%{ background-color: #eb5a36;}
+    50% { background-color: #40fe8290; }
+    75% { background-color: #b5b827e0; }
+    100%{ background-color: #fff425d4; }
+}
+
+@keyframes garden {
+    0% { background-image: url(images/hanahaikei.jpg); }
+    40% { background-image: url(images/garden-10.jpg); }
+    50% { background-image: url(images/garden-14.jpg); }
+    60% { background-image: url(images/garden-12.jpg); }
+    100% { background-image: url(images/hanahaikei.jpg); }
+}
+
+/*フッター*/
+.wrapper-footer {
+    min-height: 100vh;
+    position: relative;
+}
+footer {
+    color:white;
+    background-color: #000000;
+    width:100%;
+    text-align: center;
+}
+/*NEWS*/
+#news {
+    background-image:url(images/flower3.jpg),linear-gradient(rgb(35, 219, 7),rgb(184, 0, 0));
+    height:200px;
+    background-blend-mode: hard-light;
+    margin-bottom:15px;
+    background-color: #42620f8b;
+}
+#news .page-title {
+    text-align: center;
+    color:rgb(255, 255, 255);
+    margin:40px;
+}
+
+.page-title {
+    margin-top:140px;
+}
+
+article img {
+    margin-bottom:20px;
+    width:650px;
+    height:400px;
+}
+article p {
+    margin-bottom:0;
+}
+/*記事部分*/
+article {
+    width:74%;
+}
+/*サイドバー部分*/
+aside {
+    width:22%;
+}
+.news-contents {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+
+.post-info {
+    position:relative;
+    padding-top: 4px;
+    margin-bottom: 40px;
+    margin-top:50px;
+}
+.post-date {
+    background: #0bd;
+    border-radius: 50%;
+    color:#fff;
+    width:100px;
+    height:100px;
+    font-size:1.625rem;
+    text-align: center;
+    position:absolute;
+    top: 0;
+    padding-top:10px;
+}
+.post-date span {
+    font-size: 1rem;
+    border-top: 1px rgba(255,255,255,.5) solid;
+    padding-top: 6px;
+    display:block;
+    width:60%;
+    margin:0 auto;
+}
+.post-title {
+    font-family:"Yu Mincho", "YuMincho", serif;
+    font-size: 2rem;
+    font-weight: normal;
+}
+.post-title,
+.post-cat {
+    margin-left:120px;
+}
+
+article p {
+    margin-bottom: 1rem;
+}
+
+.sub-title {
+    font-size: 1.375rem;
+    font-family:"Yu Mincho", "YuMincho", serif;
+    padding: 15px 8px 8px;
+    border-bottom: 2px #0bd solid;
+    font-weight: normal;
+    margin-top:50px;
+}
+
+aside p {
+    padding:12px 10px;
+}
+
+aside ul {
+    padding:12px 10px;
+}
+
+.picture {
+    width:200px;
+    height:300px; 
+}
+
+/*garden*/
+#garden {
+    background-image: url(images/garden-11.jpg),linear-gradient(rgba(209, 98, 88, 0.626),rgba(0, 102, 2, 0.577));
+    background-color: #d17418;
+    min-height: 100%;
+    margin-top:700px;
+    margin-bottom:0px;
+    background-blend-mode: overlay;
+}
+
+.garden-content {
+    max-width:550px;
+    margin-top:0;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.garden-content .page-title {
+    text-align:center;
+    color:rgb(0, 0, 0);
+    text-shadow: 10px 0px 10px #ffffff;
+    background-color: rgba(253, 244, 122, 0.535);
+}
+
+.garden-content p {
+    font-size:1.125rem;
+    margin:0 0 0;
+    color:rgb(0, 0, 0);
+    text-shadow: 10px 0px 10px #ffffff;
+    text-align:center;
+    background-color: rgba(247, 222, 114, 0.743);
+}
+
+.grid {
+    display:grid;
+    gap:26px;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    margin-top:100px;
+    background-color: rgba(210, 255, 47, 0.547);
+    margin-bottom:0px;
+}
+
+.grid  p {
+    color:rgb(0, 0, 0);
+    background: rgba(206, 206, 206, 0.612);
+}
+
+.grid img {
+    border-radius: 20px;
+}
+
+#contact {
+    background-image: url(images/flower22.jpg),linear-gradient(rgba(163, 71, 62, 0.797),rgba(0, 102, 2, 0.577));
+    height:750px;
+    min-height: 100%;
+    margin-top:0px;
+    margin-bottom:40px;
+    background-blend-mode: overlay;
+    background-color: #78bf27de;
+    background-size: cover;
+}
+
+.page-title {
+    color:white;
+}
+/*フォーム*/
+form div {
+    margin-bottom: 14px;
+    color:white;
+    text-shadow: 10px 0px 10px #000000;
+}
+
+label {
+    font-size:1.5rem;
+    margin-bottom:10px;
+    display:block;
+    text-shadow: 10px 0px 10px #000000;
+    color:rgb(255, 255, 255);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    background:rgba(255, 255, 255, 0.821);
+    border:1px #fff solid;
+    border-radius: 5px;
+    padding:10px;
+    font-size:1rem;
+}
+input[type="text"],
+input[type="email"] {
+    width:100%;
+    max-width:240px;
+}
+textarea {
+    width:100%;
+    max-width:480px;
+    height:6rem;
+}
+input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+    background: rgba(255, 255, 255, 0.64);
+    color:black;
+}
+.button {
+    font-size:1.2rem;
+    background:rgba(35, 254, 239, 0.421);
+    color:rgb(255, 250, 250);
+    border-radius:5px;
+    padding: 8px 32px;
+    margin-left:80px;
+}
+.button:hover {
+    background:#d9ffb6;
+}
+/*店舗情報・地図*/
+#location {
+    padding:4% 0;
+}
+#location .wrapper {
+    display:flex;
+    justify-content: space-between;
+}
+.location-info {
+    width:45%;
+}
+.location-info p {
+    padding:12px 10px;
+}
+.location-map {
+    width:74%;
+}
+
+/*iframe*/
+iframe {
+    width:100%;
+}
+/*SNS*/
+#sns {
+    background:#FAF7F0;
+    padding: 4% 0;
+}
+#sns .wrapper {
+    display:flex;
+    justify-content: space-between;
+}
+#sns .sub-title {
+    margin-bottom:30px;
+}
+.sns-box {
+    width:30%;
+}
+
+/*モバイル版、レスポンシブ*/
+@media (max-width: 600px) {
+    .page-title {
+        font-size:2.5rem;
+    }
+
+    /*ホーム*/
+    .home-content {
+    margin-top:20%;
+    }
+
+    #home {
+        height:870px;
+    }
+
+    .page-header {
+    flex-direction: column;
+    align-items: center;    
+    }
+
+    /*NEWS*/
+    #news {
+        height:120px;
+    }
+
+    .news-content {
+        flex-direction:column;
+    }
+    article,
+    aside {
+        width:100%;
+    }
+    #news .page-title {
+        margin-top:25px;
+    }
+    aside {
+        margin-top:0px;
+    }
+    .post-info {
+        margin-bottom:20px;
+    }
+    .news-img {
+        width:300px;
+        height:250px;
+    }
+    .post-date {
+        width:70px;
+        height:70px;
+        font-size:1rem;
+    }
+    .post-date span {
+        font-size:0.875;
+        padding:2px;
+    }
+    .post-title {
+        font-size:1.375rem;
+    }
+    
+    .post-title {
+        margin-left:80px;
+    }
+    .flower-news {
+        width:200px;
+    }
+    .aside-sub {
+        margin-left:20px;
+    }
+
+    /*ガーデン*/
+    #garden {
+        height:520px;
+        min-height:0;
+        margin-top:850px;
+    }
+
+    .grid {
+        margin-top:100px;
+    }
+   
+    /*店舗情報、地図、SNS*/
+    #contact {
+        margin-top:3210px;
+    }
+    #location .wrapper,
+    #sns .wrapper {
+        flex-direction: column;
+    }
+    .location-info,
+    .location-map,
+    .sns-box {
+        width:100%;
+    }
+    .sns-box {
+        margin-bottom:30px;
+    }
+}
